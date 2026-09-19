@@ -39,7 +39,8 @@
     "preact": "^10.28.2",
     "sass": "^1.97.3",
     "tsup": "^8.5.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.1"
   },
   "engines": {
     "node": ">=22"
