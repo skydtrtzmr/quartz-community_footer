@@ -21,6 +21,12 @@ footer {
 // 修复：阅读模式开启时 footer 横跨全部 grid 列（1 / -1），恢复整行。
 :root[reader-mode="on"] #quartz-body footer {
   grid-column: 1 / -1;
+  // 与 .center 的阅读模式 padding 对齐（reader-mode-pro 给正文加了
+  // padding-left/right: 2rem 呼吸边距，footer 横跨全列后需同步，
+  // 否则页脚文字比正文左边缘多出 2rem 错位）
+  box-sizing: border-box;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 // 移动端 grid（≤800px）footer 已是单列布局，但同样保险横跨
