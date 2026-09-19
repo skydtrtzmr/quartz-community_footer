@@ -1,26 +1,12 @@
 {
-  "name": "@quartz-community/footer",
+  "name": "footer-pro",
   "version": "1.0.0",
-  "description": "Footer component for Quartz - displays site footer with links and version",
+  "description": "Footer for Quartz with custom copyright text (源悦科技) and reader-mode full-width fix",
   "type": "module",
   "license": "MIT",
-  "author": "Quartz Community",
-  "homepage": "https://github.com/quartz-community/footer",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/quartz-community/footer"
-  },
-  "keywords": [
-    "quartz",
-    "quartz-plugin",
-    "footer",
-    "component"
-  ],
   "files": [
     "dist",
-    "README.md",
-    "LICENSE",
-    "CHANGELOG.md"
+    "README.md"
   ],
   "exports": {
     ".": {
@@ -39,60 +25,36 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint . --max-warnings=0",
-    "format": "prettier . --check",
-    "test": "vitest run",
-    "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm run lint && npm run format && npm run test",
-    "prepublishOnly": "npm run build",
-    "release": "npm run build && changeset publish"
+    "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
     "preact": "^10.0.0"
-  },
-  "peerDependenciesMeta": {
-    "preact": {
-      "optional": false
-    }
   },
   "dependencies": {
     "@quartz-community/types": "^1.0.0",
     "@quartz-community/utils": "^1.0.0"
   },
   "devDependencies": {
-    "@types/hast": "^3.0.4",
-    "@types/mdast": "^4.0.4",
     "@types/node": "^24.10.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
     "preact": "^10.28.2",
-    "prettier": "^3.6.2",
     "sass": "^1.97.3",
     "tsup": "^8.5.0",
-    "typescript": "^5.9.3",
-    "vitest": "^2.1.9",
-    "@changesets/cli": "^2.29.2"
+    "typescript": "^5.9.3"
   },
   "engines": {
-    "node": ">=22",
-    "npm": ">=10.9.2"
+    "node": ">=22"
   },
   "quartz": {
-    "name": "footer",
-    "displayName": "Footer",
+    "name": "footer-pro",
+    "displayName": "Footer Pro",
     "category": "component",
     "version": "1.0.0",
     "quartzVersion": ">=5.0.0",
     "dependencies": [],
     "defaultOrder": 50,
-    "defaultEnabled": true,
+    "defaultEnabled": false,
     "defaultOptions": {
-      "links": {
-        "GitHub": "https://github.com/jackyzha0/quartz",
-        "Discord Community": "https://discord.gg/cRFFHYye7t"
-      }
+      "links": {}
     },
     "components": {
       "Footer": {
@@ -106,8 +68,5 @@
         "type": "object"
       }
     }
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

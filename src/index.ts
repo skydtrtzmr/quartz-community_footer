@@ -5,5 +5,5 @@ export type { FooterOptions } from "./components/Footer";
 export type {
   QuartzComponent,
   QuartzComponentProps,
-  StringResource,
+  QuartzComponentConstructor,
 } from "@quartz-community/types";

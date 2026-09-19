@@ -13,3 +13,19 @@ footer {
     margin-top: -1rem;
   }
 }
+
+// ============ 阅读模式全宽下的页脚横排修复 ============
+// 成因：#quartz-body 的 grid-template-areas 将 footer 放在跨列的
+// "grid-sidebar-left grid-footer grid-sidebar-right" 行中列，侧栏
+// display:none 后列虽塌缩，footer 仍受限于窄中列导致文字竖排观感。
+// 修复：阅读模式开启时 footer 横跨全部 grid 列（1 / -1），恢复整行。
+:root[reader-mode="on"] #quartz-body footer {
+  grid-column: 1 / -1;
+}
+
+// 移动端 grid（≤800px）footer 已是单列布局，但同样保险横跨
+@media all and (max-width: 800px) {
+  :root[reader-mode="on"] #quartz-body footer {
+    grid-column: 1 / -1;
+  }
+}
